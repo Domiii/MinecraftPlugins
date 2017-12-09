@@ -1,0 +1,12 @@
+main: mc.myfirstminecraftplugin.Main
+name: MyFirstMinecraftPlugin
+version: 1.0
+author: domi
+description: An Example plugin
+commands:
+  testtest:
+    description: An example command
+    usage: /<command>
+    aliases: [t]
+    permission: myplugin.mycommand
+    permission-message: You don't have permission.
