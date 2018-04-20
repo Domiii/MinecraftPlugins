@@ -44,3 +44,4 @@ Thumbs.db
 # The buildtools folder is just way too large
 #---------------------------------
 buildtools
+!buildtools/README.md
