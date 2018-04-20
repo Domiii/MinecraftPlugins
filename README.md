@@ -4,7 +4,7 @@
 Based on: 
 * [https://www.justdave.net/dave/2015/05/04/how-to-write-a-minecraftbukkit-plugin-for-spigot-1-8/](https://www.justdave.net/dave/2015/05/04/how-to-write-a-minecraftbukkit-plugin-for-spigot-1-8/)
 
-1. Install
+1. Install + Prepare Eclipse
     1. Install Eclipse
         * On MAC:
             1. Open Terminal
