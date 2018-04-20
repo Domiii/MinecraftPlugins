@@ -1,4 +1,4 @@
-package mc.myfirstminecraftplugin;
+package mc.myfirstplugin;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -24,7 +24,7 @@ public class Main extends JavaPlugin {
     	
     	sender.sendMessage("You ran " + command.getName() + "!");
         if (command.getName().equalsIgnoreCase("testtest")) {
-            sender.sendMessage("You ran /testtest!");
+            sender.sendMessage("very good");
             return true;
         }
         return false;
