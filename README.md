@@ -37,5 +37,6 @@ Based on:
 1. Go!
 
 
-## TODO
-* Screenshots + video
+## References
+
+1. [YouTube: Pogo - Coding and More](https://www.youtube.com/watch?v=bVySbfryiMM&list=PLAF3anQEEkzREsHA8yZzVhc3_GHcPnqxR) (80+ coding videos, starting from the basics and goes into tons of advanced features)
