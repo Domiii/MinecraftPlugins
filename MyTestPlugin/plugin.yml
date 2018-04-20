@@ -1,8 +1,8 @@
-main: mc.myfirstplugin.Main
-name: MyFirstPlugin
+main: mc.mytestplugin.Main
+name: MyTestPlugin
 version: 1.0
 author: domi
-description: An Example plugin
+description: my test plugin
 commands:
   testtest:
     description: An example command

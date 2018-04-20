@@ -18,7 +18,6 @@ Based on:
         * Look for and install `YEdit Plugin`
 1. Prepare 🚰 Spiggot `BuildTools`
     1. Download `BuildTools.jar` from [https://hub.spigotmc.org/jenkins/job/BuildTools/](https://hub.spigotmc.org/jenkins/job/BuildTools/)
-    1. Download `BuildTools.jar` from [https://hub.spigotmc.org/jenkins/job/BuildTools/](https://hub.spigotmc.org/jenkins/job/BuildTools/)
     1. Copy `BuildTools.jar` into the `buldtools` folder (within this folder)
     1. Build Spiggot BuildTools
         * In Terminal, go to the `buldtools` folder

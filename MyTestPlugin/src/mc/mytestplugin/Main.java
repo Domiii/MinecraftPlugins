@@ -1,4 +1,4 @@
-package mc.myfirstplugin;
+package mc.mytestplugin;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
