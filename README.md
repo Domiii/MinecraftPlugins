@@ -16,16 +16,19 @@
     1. Install `YEdit`:
         * Open `Help` -> `Eclipse Marketplace`
         * Look for and install `YEdit Plugin`
-1. Prepare 🚰 Spiggot `BuildTools`
+1. Prepare 🚰 Spigot `BuildTools`
     1. Download `BuildTools.jar` from [https://hub.spigotmc.org/jenkins/job/BuildTools/](https://hub.spigotmc.org/jenkins/job/BuildTools/)
     1. Copy `BuildTools.jar` into the `buldtools` folder (within this folder)
     1. Build Spiggot BuildTools
-        * In Terminal, go to the `buldtools` folder
-        * `java -jar BuildTools.jar` # build BuildTools
+        * In Terminal, `cd` to the `buldtools` folder
+        * NOTE: You need to build the version that matches your Server!
+        * Run: `java -jar BuildTools.jar --rev <your minecraft version>`
+            * For example: `java -jar BuildTools.jar --rev 1.12.2`
+    1. For more information, go to: [https://www.spigotmc.org/wiki/buildtools/](https://www.spigotmc.org/wiki/buildtools/)
 1. **[Ignore this (this has already been taken care of)]** Project setup:
     1. Create Project in `Eclipse` (e.g. `MyTestPlugin`)
-        * Choose new folder (e.g. `mc/MyTestPlugin`)!!!
-    1. Create Package (e.g. `mc.MyTestPlugin`)
+        * Choose new folder (e.g. `MyTestPlugin`)
+    1. Create Package (e.g. `mc.mytestplugin`)
     1. Add new source folder (e.g. `mc/MyTestPlugin/src`) 
     1. Add `Main` class to `src` folder
     1. Add `plugin.yml` file
@@ -34,11 +37,19 @@
         * The `<jar>` -> `<fileset>` -> `dir` property must be same as the project output path (`bin`)
         * NOTE: The project output path is configured in: `Project Properties` -> `Source` -> (at the bottom) `Default output folder`
     1. Open `Builders` -> Add `Make JAR` ant script
-        * at the top, choose `build.xml` and done!
-1. Update `plugins` folder location
-    * Open `build.xml` and check that the `destfile` points to your minecraft server's `plugins` folder
-    * Open your variables: `Properties` -> `Builders` -> `Make JAR` -> (Arguments) `Variables` -> `Edit`
-    * Edit the `targetdir` variable to match your servers' `plugins` directory
+        * Buildfile: `${project_loc}/build.xml`
+        * Arguments: `-Dtargetdir=${targetdir}`
+        * Done!
+1. Add 🚰 Spigot to your `classpath`:
+    * If you see a Spigot library that cannot be found, or has the wrong version, in that list, remove it
+    * right-click your project -> `Properties` -> `Java Build Path` -> `Libraries` -> `Add external jar`
+    * Go to path: `buildtools/Spigot/Spigot-API/target`
+    * Select the `SHADED` jar (e.g. `spigot-api-1.12-R0.1-SNAPSHOT-shaded.jar`) -> `Open`
+    *  -> `Apply and close`
+1. Update `targetdir` variable
+    * Open your variables: `Eclipse` -> `Preferences` (`Command ,` on MAC) -> `Run/Debug` -> `String Substitution`
+    * Add/edit the `targetdir` variable to match your servers' `plugins` directory
+    * <img src="https://i.imgur.com/7QK2Erd.png" width="400px"/>
     * In case of problems: [see screenshots + more explanation here](https://stackoverflow.com/questions/4660366/how-to-set-ant-properties-based-on-variables-in-eclipse/4989916)
 1. Go!
     * NOTE: Every time you make changes, you need to restart the server.
