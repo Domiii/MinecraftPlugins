@@ -43,7 +43,7 @@
     * Select the `SHADED` jar (e.g. `spigot-api-1.12-R0.1-SNAPSHOT-shaded.jar`) -> `Open`
     * If you have a Spigot library that cannot be found, remove it (and make sure it has been added through the steps above)
     *  -> `Apply and close`
-1. Update `https://i.imgur.com/7QK2Erd.png` variable
+1. Update `targetdir` variable
     * Open your variables: `Eclipse` -> `Preferences` (`Command ,` on MAC) -> `Run/Debug` -> `String Substitution`
     * Add/edit the `targetdir` variable to match your servers' `plugins` directory
     * <img src="https://i.imgur.com/7QK2Erd.png" width="400px"/>
