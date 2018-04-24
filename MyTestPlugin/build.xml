@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="MyTestPlugin" default="makejar" basedir=".">
+	<echo message="writing jar to: ${targetdir}" />
     <target name="makejar" description="Create a jar for the project">
         <mkdir dir="target"></mkdir>
-        <jar destfile="/Users/domi/Desktop/minecraft_server/plugins/${ant.project.name}.jar">
+        <jar destfile="${targetdir}/${ant.project.name}.jar">
             <fileset dir="bin"></fileset>
             <fileset file="plugin.yml"></fileset>
         </jar>
