@@ -15,7 +15,7 @@
     1. Install `YEdit`:
         * Open `Help` -> `Eclipse Marketplace`
         * Look for and install `YEdit Plugin`
-1. Prepare 🚰 Spiggot `BuildTools`
+1. Prepare 🚰 Spigot `BuildTools`
     1. Download `BuildTools.jar` from [https://hub.spigotmc.org/jenkins/job/BuildTools/](https://hub.spigotmc.org/jenkins/job/BuildTools/)
     1. Copy `BuildTools.jar` into the `buldtools` folder (within this folder)
     1. Build Spiggot BuildTools
@@ -36,12 +36,14 @@
         * The `<jar>` -> `<fileset>` -> `dir` property must be same as the project output path (`bin`)
         * NOTE: The project output path is configured in: `Project Properties` -> `Source` -> (at the bottom) `Default output folder`
     1. Open `Builders` -> Add `Make JAR` ant script
-        * at the top, choose `build.xml` and done!
-1. Make sure, you have added Spigot to your classpath:
+        * Buildfile: `${project_loc}/build.xml`
+        * Arguments: `-Dtargetdir=${targetdir}`
+        * Done!
+1. Add 🚰 Spigot to your `classpath`:
+    * If you see a Spigot library that cannot be found, or has the wrong version, in that list, remove it
     * right-click your project -> `Properties` -> `Java Build Path` -> `Libraries` -> `Add external jar`
     * Go to path: `buildtools/Spigot/Spigot-API/target`
     * Select the `SHADED` jar (e.g. `spigot-api-1.12-R0.1-SNAPSHOT-shaded.jar`) -> `Open`
-    * If you have a Spigot library that cannot be found, remove it (and make sure it has been added through the steps above)
     *  -> `Apply and close`
 1. Update `targetdir` variable
     * Open your variables: `Eclipse` -> `Preferences` (`Command ,` on MAC) -> `Run/Debug` -> `String Substitution`
