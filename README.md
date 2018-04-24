@@ -33,8 +33,12 @@
         * The `<jar>` -> `<fileset>` -> `dir` property must be same as the project output path (`bin`)
         * NOTE: The project output path is configured in: `Project Properties` -> `Source` -> (at the bottom) `Default output folder`
     1. Open `Builders` -> Add `Make JAR` ant script
-      * at the top, choose `build.xml` and done!
-1. Open `build.xml`, change the `destfile` to your minecraft server's `plugins` folder!
+        * at the top, choose `build.xml` and done!
+1. Update `plugins` folder location
+    * Open `build.xml` and check that the `destfile` points to your minecraft server's `plugins` folder
+    * Open your variables: `Properties` -> `Builders` -> `Make JAR` -> (Arguments) `Variables` -> `Edit`
+    * Edit the `targetdir` variable to match your servers' `plugins` directory
+    * In case of problems: [see screenshots + more explanation here](https://stackoverflow.com/questions/4660366/how-to-set-ant-properties-based-on-variables-in-eclipse/4989916)
 1. Go!
     * NOTE: Every time you make changes, you need to restart the server.
 
