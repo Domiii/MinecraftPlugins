@@ -19,8 +19,11 @@
     1. Download `BuildTools.jar` from [https://hub.spigotmc.org/jenkins/job/BuildTools/](https://hub.spigotmc.org/jenkins/job/BuildTools/)
     1. Copy `BuildTools.jar` into the `buldtools` folder (within this folder)
     1. Build Spiggot BuildTools
-        * In Terminal, go to the `buldtools` folder
-        * `java -jar BuildTools.jar` # build BuildTools
+        * In Terminal, `cd` to the `buldtools` folder
+        * NOTE: You need to build the version that matches your Server!
+        * Run: `java -jar BuildTools.jar --rev <your minecraft version>`
+            * For example: `java -jar BuildTools.jar --rev 1.12.2`
+    1. For more information, go to: [https://www.spigotmc.org/wiki/buildtools/](https://www.spigotmc.org/wiki/buildtools/)
 1. **[Ignore this (this has already been taken care of)]** Project setup:
     1. Create Project in `Eclipse` (e.g. `MyTestPlugin`)
         * Choose new folder (e.g. `mc/MyTestPlugin`)!!!
@@ -34,6 +37,12 @@
         * NOTE: The project output path is configured in: `Project Properties` -> `Source` -> (at the bottom) `Default output folder`
     1. Open `Builders` -> Add `Make JAR` ant script
         * at the top, choose `build.xml` and done!
+1. Make sure, you have added Spigot to your classpath:
+    * right-click your project -> `Properties` -> `Java Build Path` -> `Libraries` -> `Add external jar`
+    * Go to path: `buildtools/Spigot/Spigot-API/target`
+    * Select the `SHADED` jar (e.g. `spigot-api-1.12-R0.1-SNAPSHOT-shaded.jar`) -> `Open`
+    * If you have a Spigot library that cannot be found, remove it (and make sure it has been added through the steps above)
+    *  -> `Apply and close`
 1. Update `https://i.imgur.com/7QK2Erd.png` variable
     * Open your variables: `Eclipse` -> `Preferences` (`Command ,` on MAC) -> `Run/Debug` -> `String Substitution`
     * Add/edit the `targetdir` variable to match your servers' `plugins` directory
