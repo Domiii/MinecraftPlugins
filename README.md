@@ -26,8 +26,8 @@
     1. For more information, go to: [https://www.spigotmc.org/wiki/buildtools/](https://www.spigotmc.org/wiki/buildtools/)
 1. **[Ignore this (this has already been taken care of)]** Project setup:
     1. Create Project in `Eclipse` (e.g. `MyTestPlugin`)
-        * Choose new folder (e.g. `mc/MyTestPlugin`)!!!
-    1. Create Package (e.g. `mc.MyTestPlugin`)
+        * Choose new folder (e.g. `MyTestPlugin`)
+    1. Create Package (e.g. `mc.mytestplugin`)
     1. Add new source folder (e.g. `mc/MyTestPlugin/src`) 
     1. Add `Main` class to `src` folder
     1. Add `plugin.yml` file
