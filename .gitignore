@@ -27,7 +27,7 @@ functions/
 # IDEs + Editors
 #---------------------------------
 .idea/
-.project
+.classpath
 *.iml
 *.sublime-workspace
 
@@ -45,3 +45,4 @@ Thumbs.db
 #---------------------------------
 buildtools/*
 !buildtools/README.md
+/.metadata/

@@ -4,6 +4,7 @@
 * NOTE: This setup has been based on [this tutorial](https://www.justdave.net/dave/2015/05/04/how-to-write-a-minecraftbukkit-plugin-for-spigot-1-8/)
 
 1. Install + Prepare Eclipse
+    1. NOTE: This project has been built with Eclipse Oxygen.
     1. Install Eclipse
         * On MAC:
             1. Open Terminal
