@@ -33,6 +33,12 @@ class Sucker extends BukkitRunnable {
 
 	@Override
 	public void run() {
+		if (!center.isValid()) {
+			// cancel this
+			_cancel();
+			return;
+		}
+		
     	++iRepetition;
 
 		List<Entity> neighbors = center.getNearbyEntities(radius,radius,radius);
