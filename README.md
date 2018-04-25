@@ -48,6 +48,10 @@
     * Go to path: `buildtools/Spigot/Spigot-API/target`
     * Select the `SHADED` jar (e.g. `spigot-api-1.12-R0.1-SNAPSHOT-shaded.jar`) -> `Open`
     *  -> `Apply and close`
+    * Add `Source attachment` to your 🚰 Spigot classpath
+        * `Java Build Path` -> `Libraries` -> Click the small "+" next to 🚰 `Spigot` -> Source attachment -> Edit
+        * Choose `External folder` and select `../buildtools/Spigot/Spigot-API/src/main/java`
+        * <img src="https://i.imgur.com/20eyNVc.png" width="600px" />
 1. Update `targetdir` variable
     * Open your variables: `Eclipse` -> `Preferences` (`Command ,` on MAC) -> `Run/Debug` -> `String Substitution`
     * Add/edit the `targetdir` variable to match your servers' `plugins` directory
