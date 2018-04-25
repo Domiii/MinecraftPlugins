@@ -7,5 +7,10 @@
             <fileset dir="bin"></fileset>
             <fileset file="plugin.yml"></fileset>
         </jar>
+    	
+    	<!--property name="pscp" location="C:\Program Files\PuTTY\pscp"/>
+    	<exec executable="${pscp}">
+    	  <arg line="-P 22 -pw 123 ${targetdir}/${ant.project.name}.jar eason@localhost:/plugins/FunJar.jar"/>
+    	</exec-->
     </target>
 </project>

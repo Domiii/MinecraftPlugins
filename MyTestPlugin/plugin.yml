@@ -1,4 +1,4 @@
-main: mc.mytestplugin.Main
+main: mc.mytestplugin.MyTestPlugin
 name: MyTestPlugin
 version: 1.0
 author: domi
@@ -8,5 +8,11 @@ commands:
     description: An example command
     usage: /<command>
     aliases: [t]
-    permission: myplugin.mycommand
-    permission-message: You don't have permission.
+  runasplayer:
+    description: 
+    usage: /<command>
+    aliases: [rap]
+  fun:
+    aliases: []
+  suck:
+    aliases: []
