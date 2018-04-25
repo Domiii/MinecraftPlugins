@@ -1,4 +1,4 @@
-package mc.mytestplugin;
+package commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;

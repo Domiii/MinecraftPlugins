@@ -1,3 +1,4 @@
+package commands;
 //package mc.mytestplugin;
 //
 //import java.util.logging.Handler;

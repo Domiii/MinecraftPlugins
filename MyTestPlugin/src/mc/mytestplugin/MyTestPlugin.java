@@ -11,6 +11,11 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import commands.CustomOpCommand;
+import commands.FunCommand;
+import commands.PlayerCommanderCommand;
+import commands.SuckCommand;
+
 //plugman reload MyTestPlugin
 
 public class MyTestPlugin extends JavaPlugin {

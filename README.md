@@ -39,7 +39,7 @@
     * NOTE: The `Make JAR` builder allows us to automatically create our `*.jar` file and export it into our Minecraft server's `plugin` folder.
     * Open `Builders` -> Add `Make JAR` ant script
         * NOTE: This might already exist, in which case, you are done!
-    * Buildfile: `${project_loc}/build.xml`
+    * Buildfile: `${workspace_loc:/MyTestPlugin/build.xml}`
     * Arguments: `-Dtargetdir=${targetdir}`
     * Done!
 1. Add 🚰 Spigot to your `classpath`:

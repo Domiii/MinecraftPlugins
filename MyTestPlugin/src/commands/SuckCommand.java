@@ -1,4 +1,4 @@
-package mc.mytestplugin;
+package commands;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +12,8 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
+
+import mc.mytestplugin.MyTestPlugin;
 
 class Sucker extends BukkitRunnable {
 	SuckCommand manager;
@@ -52,7 +54,13 @@ class Sucker extends BukkitRunnable {
 				continue;
 			}
 			
-			Vector v = dist.normalize().multiply(suckSpeed);
+			Vector dir = dist.normalize();
+			
+			// look at center
+			n.getLocation().setDirection(dir);
+			
+			// move toward center
+			Vector v = dir.multiply(suckSpeed);
 			n.setVelocity(v);
 		}
 		
@@ -83,7 +91,7 @@ public class SuckCommand implements CommandExecutor {
 	
 	List<Sucker> suckers;
 	
-	SuckCommand() {
+	public SuckCommand() {
 		suckers = new ArrayList<Sucker>();
 	}
 	
