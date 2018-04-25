@@ -33,13 +33,15 @@
     1. Add `Main` class to `src` folder
     1. Add `plugin.yml` file
     1. Add `build.xml` file
-        * NOTE: We can use the `build.xml` file to automatically add build steps. By default, we use it to automatically create our `*.jar` file and export it into our Minecraft server's `plugin` folder.
         * The `<jar>` -> `<fileset>` -> `dir` property must be same as the project output path (`bin`)
         * NOTE: The project output path is configured in: `Project Properties` -> `Source` -> (at the bottom) `Default output folder`
-    1. Open `Builders` -> Add `Make JAR` ant script
-        * Buildfile: `${project_loc}/build.xml`
-        * Arguments: `-Dtargetdir=${targetdir}`
-        * Done!
+1. Add `Make JAR` builder
+    * NOTE: The `Make JAR` builder allows us to automatically create our `*.jar` file and export it into our Minecraft server's `plugin` folder.
+    * Open `Builders` -> Add `Make JAR` ant script
+        * NOTE: This might already exist, in which case, you are done!
+    * Buildfile: `${project_loc}/build.xml`
+    * Arguments: `-Dtargetdir=${targetdir}`
+    * Done!
 1. Add 🚰 Spigot to your `classpath`:
     * If you see a Spigot library that cannot be found, or has the wrong version, in that list, remove it
     * right-click your project -> `Properties` -> `Java Build Path` -> `Libraries` -> `Add external jar`
