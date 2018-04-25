@@ -16,6 +16,9 @@ import org.bukkit.entity.Villager;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scheduler.BukkitTask;
 import org.bukkit.util.Vector;
+
+import npcs.DiggerTrait;
+
 import org.bukkit.command.CommandExecutor;
 
 public class FunCommand implements CommandExecutor {
@@ -104,6 +107,9 @@ public class FunCommand implements CommandExecutor {
 			}
 			sender.sendMessage("Killed " + neighbors.size() + " entities");
 			return true;
+		}
+		case "dig": {
+			DiggerTrait.spawnOne(p);
 		}
 		case "e": {
 		}
