@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="MyTestPlugin" default="makejar" basedir=".">
-	<echo message="writing jar to: ${targetdir}" />
+	<!--echo message="writing jar to: ${targetdir}" /-->
     <target name="makejar" description="Create a jar for the project">
         <mkdir dir="target"></mkdir>
         <jar destfile="${targetdir}/${ant.project.name}.jar">
